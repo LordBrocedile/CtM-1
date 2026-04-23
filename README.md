@@ -1,2 +1,2 @@
 # CtM-1
-Das Offizielle GitHub Repository für: Create the Modpack explorer the steam
+The official GitHub Repository for: Create the Modpack explorer the steam
