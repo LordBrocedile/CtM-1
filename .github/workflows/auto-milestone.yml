@@ -7,6 +7,7 @@ on:
 jobs:
   assign:
     runs-on: ubuntu-latest
+
     steps:
       - name: Extract milestone from issue body
         id: extract
@@ -14,9 +15,9 @@ jobs:
           MILESTONE=$(echo "${{ github.event.issue.body }}" | awk '/### Target Milestone/{getline; print}')
           echo "milestone=$MILESTONE" >> $GITHUB_OUTPUT
 
-      - name: Set milestone
-        uses: actions-ecosystem/action-add-milestone@v1
+      - name: Add milestone to issue
+        uses: actions-ecosystem/action-add-milestone-to-issue@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           milestone: ${{ steps.extract.outputs.milestone }}
-  
+          
