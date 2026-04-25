@@ -5,13 +5,13 @@ on:
     types: [opened]
 
 jobs:
-  set-milestone:
+  assign:
     runs-on: ubuntu-latest
     steps:
       - name: Extract milestone from issue body
         id: extract
         run: |
-          MILESTONE=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=### Target Milestone\n\n\*\*).*(?=\*\*)')
+          MILESTONE=$(echo "${{ github.event.issue.body }}" | awk '/### Target Milestone/{getline; print}')
           echo "milestone=$MILESTONE" >> $GITHUB_OUTPUT
 
       - name: Set milestone
@@ -19,4 +19,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           milestone: ${{ steps.extract.outputs.milestone }}
-          
+  
