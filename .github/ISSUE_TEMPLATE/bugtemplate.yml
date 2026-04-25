@@ -2,7 +2,7 @@ name: "Modpack Issue"
 description: "Please report your bug"
 title: "[Modpack] <Short Summary>"
 labels:
-  - modpack
+  - Bug
 body:
 
   - type: textarea
