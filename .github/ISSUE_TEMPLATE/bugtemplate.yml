@@ -9,8 +9,8 @@ body:
     id: description
     attributes:
       label: Description
-      description: Provide a clear and detailed explanation of the issue or idea
-      placeholder: "What happened or what should be added/changed?"
+      description: Provide a clear and detailed explanation of the issue.
+      placeholder: "Please descripe your bug"
     validations:
       required: true
 
