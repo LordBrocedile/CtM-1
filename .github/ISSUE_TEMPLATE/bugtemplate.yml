@@ -17,31 +17,20 @@ body:
   - type: textarea
     id: reproduce
     attributes:
-      label: Steps to Reproduce (for bugs)
+      label: Steps to Reproduce
       description: List the steps needed to reproduce the issue
       placeholder: |
-        1. Step 1
-        2. Step 2
-        3. Step 3
+        1. Step:
+        2. Step:
+        3. Step:
+        
         Expected behavior:
     validations:
       required: false
 
-  - type: input
-    id: mc_version
-    attributes:
-      label: Minecraft Version
-      placeholder: "e.g., 1.20.1"
-    validations:
-      required: true
+  
 
-  - type: input
-    id: pack_version
-    attributes:
-      label: Modpack Version
-      placeholder: "e.g., 0.4.2"
-    validations:
-      required: true
+  
 
   - type: dropdown
     id: environment
