@@ -1,1 +1,91 @@
+name: "Modpack Issue"
+description: "Report a bug, suggestion, or change for the Minecraft modpack"
+title: "[Modpack] <Short Summary>"
+labels:
+  - modpack
+body:
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      description: Select the category that best fits your issue
+      options:
+        - Bug
+        - Feature Request
+        - Balancing / Configuration
+        - Other
+    validations:
+      required: true
 
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a clear and detailed explanation of the issue or idea
+      placeholder: "What happened or what should be added/changed?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce (for bugs)
+      description: List the steps needed to reproduce the issue
+      placeholder: |
+        1. Step 1
+        2. Step 2
+        3. Step 3
+        Expected behavior:
+    validations:
+      required: false
+
+  - type: input
+    id: mc_version
+    attributes:
+      label: Minecraft Version
+      placeholder: "e.g., 1.20.1"
+    validations:
+      required: true
+
+  - type: input
+    id: pack_version
+    attributes:
+      label: Modpack Version
+      placeholder: "e.g., 0.4.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Singleplayer
+        - Private Server
+        - Public Server
+    validations:
+      required: true
+
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Target Milestone
+      description: Select the milestone this issue should be assigned to
+      options:
+        - v1.0.0 – Initial Release
+        - v1.1.0 – Quality of Life Update
+        - v1.2.0 – Nether Update
+        - v1.3.0 – Endgame Update
+        - Hotfix – Next Patch
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional Information
+      description: Add screenshots, logs, or any other helpful details
+      placeholder: "Optional"
+    validations:
+      required: false
+      
