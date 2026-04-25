@@ -49,11 +49,10 @@ body:
       label: Target Milestone
       description: Select the milestone this issue should be assigned to
       options:
-        - v1.0.0 – Initial Release
-        - v1.1.0 – Quality of Life Update
-        - v1.2.0 – Nether Update
-        - v1.3.0 – Endgame Update
-        - Hotfix – Next Patch
+        - Version pre1.4.0
+        - Version pre1.3.0
+        - Version pre1.2.0
+        - Version pre1.1.0
     validations:
       required: true
 
