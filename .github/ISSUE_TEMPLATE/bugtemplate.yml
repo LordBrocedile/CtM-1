@@ -44,7 +44,7 @@ body:
       required: true
 
   - type: dropdown
-    id: milestone
+    id: target_milestone
     attributes:
       label: Target Milestone
       description: Select the milestone this issue should be assigned to
