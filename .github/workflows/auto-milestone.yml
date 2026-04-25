@@ -1,1 +1,22 @@
+name: Auto-Assign Milestone
 
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  set-milestone:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract milestone from issue body
+        id: extract
+        run: |
+          MILESTONE=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=### Target Milestone\n\n\*\*).*(?=\*\*)')
+          echo "milestone=$MILESTONE" >> $GITHUB_OUTPUT
+
+      - name: Set milestone
+        uses: actions-ecosystem/action-add-milestone@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          milestone: ${{ steps.extract.outputs.milestone }}
+          
