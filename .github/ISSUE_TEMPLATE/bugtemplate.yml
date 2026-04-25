@@ -4,18 +4,6 @@ title: "[Modpack] <Short Summary>"
 labels:
   - modpack
 body:
-  - type: dropdown
-    id: issue_type
-    attributes:
-      label: Issue Type
-      description: Select the category that best fits your issue
-      options:
-        - Bug
-        - Feature Request
-        - Balancing / Configuration
-        - Other
-    validations:
-      required: true
 
   - type: textarea
     id: description
